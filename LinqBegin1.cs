@@ -90,9 +90,8 @@ namespace PT4Tasks
             //Task("LinqBegin11");
             //Put(GetEnumerableString().Aggregate("", (str1,str2) => str1+str2[0]));
 
-            //Ìäà
             //Task("LinqBegin12");
-            //Put(GetEnumerableInt().Aggregate(1.0, (num1, num2) => num1 * Math.Abs((num2%10))));
+            //Put(GetEnumerableInt().Select(x => Math.Abs(x%10)).Aggregate(1.0, (a, b) => a*b));
 
             //Task("LinqBegin13");
             //int n = GetInt();
