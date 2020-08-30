@@ -101,7 +101,7 @@ namespace PT4Tasks
             //Task("LinqBegin14");
             //int a = GetInt();
             //int b = GetInt();
-            //Put(Enumerable.Range(a, b-a+1).Select(x=>x*x).Average());
+            //Put(Enumerable.Range(a, b - a + 1).Average(x => x * x));
 
             //Task("LinqBegin15");
             //int n = GetInt();
