@@ -25,8 +25,15 @@ namespace PT4Tasks
         //     отладочная печать значений r, полученных из элементов e
         //     последовательности, cmt - строковый комментарий.
 
+
+        /// <summary>
+        /// EN: Uncomment lines for required task
+        /// RU: Убрать комментарии для запуска нужной задачи
+        /// </summary>
         public static void Solve()
         {
+            #region First group: LinqBegin1-LinqBegin15
+
             //Task("LinqBegin1");
             //var a = GetEnumerableInt();
             //Put(a.First(e => e>0));
@@ -91,10 +98,22 @@ namespace PT4Tasks
             //int n = GetInt();
             //Put(Enumerable.Range(1,n).Sum(e => 1.0/e));
 
-            
+            //Task("LinqBegin14");
+            //int a = GetInt();
+            //int b = GetInt();
+            //Put(Enumerable.Range(a, b-a+1).Select(x=>x*x).Average());
 
-           
-            
+            //Task("LinqBegin15");
+            //int n = GetInt();
+            //Put(Enumerable.Range(0, n).Aggregate(1.0, (num1, num2) => num1 + num1 * num2));
+            #endregion
+
+            #region Second group: LinqBegin16-LinqBegin31
+
+
+
+            #endregion
+
         }
     }
 }
