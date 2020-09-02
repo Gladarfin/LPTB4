@@ -195,8 +195,40 @@ namespace PT4Tasks
             //        TakeWhile(c=> !char.IsDigit(c[c.Length-1])).Reverse())
             //        .Distinct().OrderBy(s => s.Length).ThenBy(s=>s);
             //Put(b.Count(), b);
-            
+
             #endregion
+
+            #region Third group: LinqBegin32-LinqBegin43
+            //Task("LinqBegin32");
+            //GetEnumerableString().Select(c => c[0]).Reverse().Put();
+
+            //Task("LinqBegin33");
+            //GetEnumerableInt().Where(s => s >= 0).Select(n => n % 10).Distinct().Put();
+
+            //Task("LinqBegin34");
+            //GetEnumerableInt().Where(s => s % 2 == 1).Select(n => n.ToString()).OrderBy(c => c).Put();
+
+            //Task("LinqBegin35");
+            //int i = 1;
+            //GetEnumerableInt().Select(n => n*(i++)).Where(n => Math.Abs(n) >= 10 && Math.Abs(n)<=99).Reverse().Put();
+
+            //Task("LinqBegin36");
+            //GetEnumerableString().Select(s => s.Length % 2 == 1 ? s[0] : s[s.Length - 1]).OrderByDescending(s=>s).Put();
+
+            //Task("LinqBegin37");
+            //GetEnumerableString().Select((s, i) => s.Length != 0 ? s + (i + 1).ToString():"").Where(s=> s.Length!=0).OrderBy(s=>s).Put();
+
+            //Task("LinqBegin38");
+            //GetEnumerableInt().Select((n, i) => (i + 1) % 3 == 1 ? 2 * n : (i+1) % 3 == 0? 3: n).Where(n=> n != 3).Put();
+
+
+            #endregion
+
+            #region Fourth group: LinqBegin44-LinqBegin60
+
+
+            #endregion
+
 
         }
     }
