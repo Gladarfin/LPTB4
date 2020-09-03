@@ -249,8 +249,60 @@ namespace PT4Tasks
             #endregion
 
             #region Fourth group: LinqBegin44-LinqBegin60
+            //Task("LinqBegin44");
+            //int k1 = GetInt();
+            //int k2 = GetInt();
+            //GetEnumerableInt().Where(a => a > k1).Concat(GetEnumerableInt().Where(b => b < k2)).OrderBy(e => e).Put();
 
+            //Task("LinqBegin45");
+            //int l1 = GetInt();
+            //int l2 = GetInt();
+            //GetEnumerableString().Where(a => a.Length == l1)
+            //                     .Concat(GetEnumerableString().Where(b => b.Length == l2))
+            //                     .OrderByDescending(s => s).Put();
 
+            //Task("LinqBegin46");
+            //var a = GetEnumerableInt();
+            //var b = GetEnumerableInt();
+            //a.Join(b, 
+            //       x => x % 10, 
+            //       y => y % 10, 
+            //       (x, y) => string.Format("{0}-{1}", x, y))
+            //       .Put();
+
+            //Task("LinqBegin47");
+            //var a = GetEnumerableInt();
+            //var b = GetEnumerableInt().OrderBy(e => e.ToString());
+            //a.Join(b,
+            //       x => x % 10,
+            //       y => (int)char.GetNumericValue(y.ToString()[0]),
+            //       (x, y) => string.Format("{0}:{1}", x, y))
+            //       .Put();
+
+            //Task("LinqBegin48");
+            //var a = GetEnumerableString().OrderBy(e => e);
+            //var b = GetEnumerableString().OrderByDescending(e => e);
+            //a.Join(b,
+            //       x => x.Length-1,
+            //       y => y.Length-1,
+            //       (x,y) => string.Format("{0}:{1}",x,y))
+            // .Put();
+
+            //Task("LinqBegin49");
+            //var a = GetEnumerableString();
+            //var b = GetEnumerableString().OrderBy(e => e);
+            //var c = GetEnumerableString().OrderByDescending(e => e);
+
+            //a.Join(b
+            //    .Join(c,
+            //          x => x[0],
+            //          y => y[0],
+            //          (x,y) => string.Format("{0}={1}",x,y)),
+            //          f => f[0],
+            //          g => g[0],
+            //          (f,g) => string.Format("{0}={1}",f,g)).Put();
+
+            
             #endregion
 
 
