@@ -1,6 +1,7 @@
 using PT4;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -219,8 +220,31 @@ namespace PT4Tasks
             //GetEnumerableString().Select((s, i) => s.Length != 0 ? s + (i + 1).ToString():"").Where(s=> s.Length!=0).OrderBy(s=>s).Put();
 
             //Task("LinqBegin38");
-            //GetEnumerableInt().Select((n, i) => (i + 1) % 3 == 1 ? 2 * n : (i+1) % 3 == 0? 3: n).Where(n=> n != 3).Put();
+            //GetEnumerableInt().Select((n, i) => (i + 1) % 3 == 1 ? 2 * n : (i+1) % 3 == 0 ? 3: n).Where(n=> n != 3).Put();
 
+            //Task("LinqBegin39");
+            //GetEnumerableString().SelectMany(n => n.Where(c => char.IsDigit(c))).Put();
+
+            //Task("LinqBegin40");
+            //int k = GetInt();
+            //GetEnumerableString().Where(s => s.Length>=k).SelectMany(n => n.ToString()).Reverse().Put();
+
+            //Task("LinqBegin41");
+            //int k = GetInt();
+            //GetEnumerableString().SelectMany(n => n.Split('.')).Where(s => s.Length == k).OrderBy(s => s).Put();
+
+            //Task("LinqBegin42");
+            //GetEnumerableString().SelectMany((s, i) => (i+1) % 2 == 1 ? 
+            //                      s.Select(t => t).Where(k => char.IsUpper(k)) :
+            //                      s.Select(t => t).Where(k => char.IsLower(k)))
+            //                      .Put();
+
+            //Task("LinqBegin43");
+            //int k = GetInt();
+            //GetEnumerableString().SelectMany((s, i) => (i + 1)<=k ?
+            //                     s.Where((c, j) => (j + 1)%2 == 1) :
+            //                     s.Where((c, j) => (j + 1)%2 == 0))
+            //                     .Reverse().Put();
 
             #endregion
 
