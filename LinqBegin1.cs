@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Xml.Schema;
 
 namespace PT4Tasks
 {
-    public class MyTask: PT
+    public class MyTask : PT
     {
         // При решении задач группы LinqBegin доступны следующие
         // дополнительные методы, определенные в задачнике:
@@ -297,15 +298,52 @@ namespace PT4Tasks
             //    .Join(c,
             //          x => x[0],
             //          y => y[0],
-            //          (x,y) => string.Format("{0}={1}",x,y)),
+            //          (x, y) => string.Format("{0}={1}", x, y)),
             //          f => f[0],
             //          g => g[0],
-            //          (f,g) => string.Format("{0}={1}",f,g)).Put();
+            //          (f, g) => string.Format("{0}={1}", f, g)).Put();
 
-            
+            //Task("LinqBegin50");
+            //GetEnumerableString().GroupJoin(GetEnumerableString(),
+            //            x => x[0],
+            //            y => y[0],
+            //            (x, y) => string.Format("{0}:{1}", x, y.Count()))
+            // .Put();
+
+            //Task("LinqBegin51");
+            //GetEnumerableInt().GroupJoin(GetEnumerableInt(),
+            //            x => x % 10,
+            //            y => y % 10,
+            //            (x, y) => new { x, y = y.Sum() })
+            // .OrderBy(e => e.y)
+            // .ThenByDescending(e => e.x)
+            // .Select(e => e.y.ToString() + ':' + e.x.ToString()).Put();
+
+            //Task("LinqBegin52");
+            //var a = GetEnumerableString().Where(e => char.IsDigit(e[e.Length-1])).OrderBy(e=>e);
+            //var b = GetEnumerableString().Where(e => char.IsDigit(e[e.Length-1])).OrderByDescending(e => e);
+            //a.SelectMany(e => b.Select(g => e + '='+g)).Put();
+
+            //Task("LinqBegin53");
+            //var a = GetEnumerableInt();
+            //var b = GetEnumerableInt();
+            //a.SelectMany(e => b.Select(f => e + f)).Distinct().OrderBy(e => e).Put();
+
+            //Task("LinqBegin54");
+            //GetEnumerableString().GroupJoin(
+            //    GetEnumerableString(),
+            //    right => right[0],
+            //    right => right[0],
+            //    (left, e2) => e2.DefaultIfEmpty().Select(right => left +'.'+ right))
+            //                    .SelectMany(e => e).OrderBy(e => e)
+            //                    .Put();
+
+            Task("LinqBegin55");
+
             #endregion
 
 
         }
     }
+
 }
