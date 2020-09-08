@@ -30,15 +30,12 @@ namespace PT4Tasks
 
         public static void Solve()
         {
-            //LinqBegin1°. Дана целочисленная последовательность, 
-            //содержащая как положительные, так и отрицательные числа. 
-            //Вывести ее первый положительный элемент и последний отрицательный элемент.
 
-            Task("LinqBegin1");
-            var a = GetEnumerableInt();
-            Put(a.First(e => e > 0));
-            Put(a.Last(e => e < 0));
+            //LinqBegin13°. Дано целое число N(> 0). Используя методы Range и Sum, найти сумму 1 + (1 / 2) + … +(1 / N)(как вещественное число).
 
+            Task("LinqBegin13");
+            int n = GetInt();
+            Put(Enumerable.Range(1,n).Sum(e => 1.0/e));            
         }
     }
 

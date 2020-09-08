@@ -30,15 +30,11 @@ namespace PT4Tasks
 
         public static void Solve()
         {
-            //LinqBegin1°. Дана целочисленная последовательность, 
-            //содержащая как положительные, так и отрицательные числа. 
-            //Вывести ее первый положительный элемент и последний отрицательный элемент.
+            //LinqBegin18°. Дана целочисленная последовательность.Извлечь из нее все четные отрицательные числа, поменяв порядок извлеченных чисел на обратный. 
 
-            Task("LinqBegin1");
-            var a = GetEnumerableInt();
-            Put(a.First(e => e > 0));
-            Put(a.Last(e => e < 0));
-
+            Task("LinqBegin18");
+            var numbers = GetEnumerableInt().Where(e => e % 2 == 0 && e < 0).Reverse();
+            Put(numbers.Count(), numbers);            
         }
     }
 

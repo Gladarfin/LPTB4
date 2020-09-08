@@ -30,15 +30,15 @@ namespace PT4Tasks
 
         public static void Solve()
         {
-            //LinqBegin1°. Дана целочисленная последовательность, 
-            //содержащая как положительные, так и отрицательные числа. 
-            //Вывести ее первый положительный элемент и последний отрицательный элемент.
+            //LinqBegin19°. Дана цифра D(целое однозначное число) и целочисленная последовательность A. 
+            //Извлечь из A все различные положительные числа, оканчивающиеся цифрой D(в исходном порядке).
+            //При наличии повторяющихся элементов удалять все их вхождения, кроме последних.
+            //Указание.Последовательно применить методы Reverse, Distinct, Reverse
 
-            Task("LinqBegin1");
-            var a = GetEnumerableInt();
-            Put(a.First(e => e > 0));
-            Put(a.Last(e => e < 0));
-
+            Task("LinqBegin19");
+            var d = GetInt();
+            var numbers = GetEnumerableInt().Where(e => e % 10 == d).Reverse().Distinct().Reverse();
+            Put(numbers.Count(), numbers); 
         }
     }
 

@@ -30,15 +30,11 @@ namespace PT4Tasks
 
         public static void Solve()
         {
-            //LinqBegin1°. Дана целочисленная последовательность, 
-            //содержащая как положительные, так и отрицательные числа. 
-            //Вывести ее первый положительный элемент и последний отрицательный элемент.
+            //LinqBegin11°. Дана последовательность непустых строк. 
+            //Используя метод Aggregate, получить строку, состоящую из начальных символов всех строк исходной последовательности.
 
-            Task("LinqBegin1");
-            var a = GetEnumerableInt();
-            Put(a.First(e => e > 0));
-            Put(a.Last(e => e < 0));
-
+            Task("LinqBegin11");
+            Put(GetEnumerableString().Aggregate("", (str1,str2) => str1+str2[0]));            
         }
     }
 

@@ -30,15 +30,13 @@ namespace PT4Tasks
 
         public static void Solve()
         {
-            //LinqBegin1°. Дана целочисленная последовательность, 
-            //содержащая как положительные, так и отрицательные числа. 
-            //Вывести ее первый положительный элемент и последний отрицательный элемент.
+            //LinqBegin5°. Дан символ С и строковая последовательность A.Найти количество элементов A, 
+            //которые содержат более одного символа и при этом начинаются и оканчиваются символом C. 
 
-            Task("LinqBegin1");
-            var a = GetEnumerableInt();
-            Put(a.First(e => e > 0));
-            Put(a.Last(e => e < 0));
-
+            Task("LinqBegin5");
+            char c = GetChar();
+            var a = GetEnumerableString();
+            Put(a.Count(s => s.Length > 1 && s[0] == c && s[s.Length - 1] == c));
         }
     }
 

@@ -30,15 +30,12 @@ namespace PT4Tasks
 
         public static void Solve()
         {
-            //LinqBegin1°. Дана целочисленная последовательность, 
-            //содержащая как положительные, так и отрицательные числа. 
-            //Вывести ее первый положительный элемент и последний отрицательный элемент.
+            //LinqBegin15°. Дано целое число N(0 ≤ N ≤ 15). Используя методы Range и Aggregate, найти факториал числа N: N! = 1·2·…·N при N ≥ 1; 0! = 1.
+            //Чтобы избежать целочисленного переполнения, при вычислении факториала использовать вещественный числовой тип.
 
-            Task("LinqBegin1");
-            var a = GetEnumerableInt();
-            Put(a.First(e => e > 0));
-            Put(a.Last(e => e < 0));
-
+            Task("LinqBegin15");
+            int n = GetInt();
+            Put(Enumerable.Range(0, n).Aggregate(1.0, (num1, num2) => num1 + num1 * num2));
         }
     }
 

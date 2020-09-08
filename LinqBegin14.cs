@@ -30,15 +30,13 @@ namespace PT4Tasks
 
         public static void Solve()
         {
-            //LinqBegin1°. Дана целочисленная последовательность, 
-            //содержащая как положительные, так и отрицательные числа. 
-            //Вывести ее первый положительный элемент и последний отрицательный элемент.
+            //LinqBegin14°. Даны целые числа A и B(A<B). Используя методы Range и Average, найти среднее арифметическое квадратов всех 
+            //целых чисел от A до B включительно: (A2 + (A + 1)2 + … +B2)/ (B − A + 1) (как вещественное число). 
 
-            Task("LinqBegin1");
-            var a = GetEnumerableInt();
-            Put(a.First(e => e > 0));
-            Put(a.Last(e => e < 0));
-
+            Task("LinqBegin14");
+            int a = GetInt();
+            int b = GetInt();
+            Put(Enumerable.Range(a, b - a + 1).Average(x => x * x));           
         }
     }
 

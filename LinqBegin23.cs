@@ -30,15 +30,13 @@ namespace PT4Tasks
 
         public static void Solve()
         {
-            //LinqBegin1°. Дана целочисленная последовательность, 
-            //содержащая как положительные, так и отрицательные числа. 
-            //Вывести ее первый положительный элемент и последний отрицательный элемент.
+            //LinqBegin23°. Дано целое число K(> 0) и целочисленная последовательность A. 
+            //Начиная с элемента A с порядковым номером K, извлечь из A все нечетные двузначные числа, отсортировав их по убыванию.
 
-            Task("LinqBegin1");
-            var a = GetEnumerableInt();
-            Put(a.First(e => e > 0));
-            Put(a.Last(e => e < 0));
-
+            Task("LinqBegin23");
+            int k = GetInt();
+            var a = GetEnumerableInt().Skip(k - 1).Where(e => Math.Abs(e / 10) >= 1 && Math.Abs(e / 10) <= 9 && Math.Abs(e % 2) == 1).OrderByDescending(n=>n);
+            Put(a.Count(), a);
         }
     }
 

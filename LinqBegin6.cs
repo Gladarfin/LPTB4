@@ -30,15 +30,10 @@ namespace PT4Tasks
 
         public static void Solve()
         {
-            //LinqBegin1°. Дана целочисленная последовательность, 
-            //содержащая как положительные, так и отрицательные числа. 
-            //Вывести ее первый положительный элемент и последний отрицательный элемент.
+            //LinqBegin6°. Дана строковая последовательность.Найти сумму длин всех строк, входящих в данную последовательность. 
 
-            Task("LinqBegin1");
-            var a = GetEnumerableInt();
-            Put(a.First(e => e > 0));
-            Put(a.Last(e => e < 0));
-
+            Task("LinqBegin6");
+            Put(GetEnumerableString().Sum(s => s.Length));
         }
     }
 

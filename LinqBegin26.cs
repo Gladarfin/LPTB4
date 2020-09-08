@@ -30,15 +30,15 @@ namespace PT4Tasks
 
         public static void Solve()
         {
-            //LinqBegin1°. Дана целочисленная последовательность, 
-            //содержащая как положительные, так и отрицательные числа. 
-            //Вывести ее первый положительный элемент и последний отрицательный элемент.
+            //LinqBegin26°. Даны целые числа K1 и K2 и последовательность непустых строк A; 1 < K1 < K2 ≤ N, 
+            //где N — размер последовательности A.Найти среднее арифметическое длин всех элементов последовательности, 
+            //кроме элементов с порядковыми номерами от K1 до K2 включительно, и вывести его как вещественное число.
 
-            Task("LinqBegin1");
-            var a = GetEnumerableInt();
-            Put(a.First(e => e > 0));
-            Put(a.Last(e => e < 0));
-
+            Task("LinqBegin26");
+            int k1 = GetInt();
+            int k2 = GetInt();
+            var a = GetEnumerableString();
+            Put(a.Take(k1-1).Union(a.Skip(k2).Take(a.Count()-k2)).Select(e=>e.Length).Average()); 
         }
     }
 

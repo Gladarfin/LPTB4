@@ -30,15 +30,13 @@ namespace PT4Tasks
 
         public static void Solve()
         {
-            //LinqBegin1°. Дана целочисленная последовательность, 
-            //содержащая как положительные, так и отрицательные числа. 
-            //Вывести ее первый положительный элемент и последний отрицательный элемент.
+            //LinqBegin44°. Даны целые числа K1 и K2 и целочисленные последовательности A и B. Получить последовательность, 
+            //содержащую все числа из A, большие K1, и все числа из B, меньшие K2. Отсортировать полученную последовательность по возрастанию.
 
-            Task("LinqBegin1");
-            var a = GetEnumerableInt();
-            Put(a.First(e => e > 0));
-            Put(a.Last(e => e < 0));
-
+            Task("LinqBegin44");
+            int k1 = GetInt();
+            int k2 = GetInt();
+            GetEnumerableInt().Where(a => a > k1).Concat(GetEnumerableInt().Where(b => b < k2)).OrderBy(e => e).Put();            
         }
     }
 
